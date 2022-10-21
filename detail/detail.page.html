@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button>
+      <ion-back-button>
+
+      </ion-back-button>
+    </ion-button>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+<ion-header collapase="condense">
+<ion-toolbar>
+<ion-title size="large">Weather Forcast</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<div id="container">
+  <h1 class="ion-60p"> {{ weather.temp }} °C </h1>
+
+
+  <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png" alt="">
+  <h1 class="ion-30p">
+    {{ weather.main }} <small> {{ weather.desc }} </small> <br>
+    <ion-icon name="calender-outline"></ion-icon>
+    {{ weather.date | date:'dd MMM yyyy - HH:mm' }}   </h1>
+
+    <ion-button (click)="save()">Favorite</ion-button>
+
+</div>
+</ion-content>

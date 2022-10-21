@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Weather Nw</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="ko" >
+  <div id="container" class="ion-text-center">
+    <h1 class="ion-60p">{{temp}} °C</h1>
+    <div *ngFor="let w of weather.weather">
+      <img
+        src="http://openweathermap.org/img/wn/{{w.icon}}@2x.png"
+        width="100px"
+      />
+
+      <h1 class="ion-30p" style="color: #00ffff">
+        {{city}} <br />
+
+        {{country}}
+        <br />
+        {{sunset}}
+        <br />
+        {{w.main}} (<small>{{w.description}}</small>)
+      </h1>
+    </div>
+  </div>
+</ion-content>
